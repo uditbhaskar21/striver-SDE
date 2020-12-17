@@ -1,0 +1,20 @@
+package com.company;
+
+public class thirdb {
+    public static void main(String[] args) {
+        int arr[] = {4,3,6,2,1,1};
+        int num[] = new int[7];
+        for (int i=0;i<arr.length;i++){
+            num[arr[i]]+=1;
+        }
+        for (int i=1;i<=num.length;i++){
+            if (num[i]==2){
+                System.out.println("Repeating:"+i);
+            }
+            if (num[i]==0){
+                System.out.println("Missing"+i);
+            }
+        }
+
+    }
+}
