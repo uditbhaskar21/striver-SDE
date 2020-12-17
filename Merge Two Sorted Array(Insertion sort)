@@ -1,0 +1,30 @@
+package com.company;
+
+import java.util.Arrays;
+
+public class fourthb {
+    public static void main(String[] args) {
+        int a1[] = {1,4,7,8,10};
+        int a2[] = {2,3,9};
+        merge(a1,a2);
+        System.out.println("x: " + Arrays.toString(a1));
+        System.out.println("y: " + Arrays.toString(a2));
+    }
+    static void merge(int[]a1,int[]a2){
+        int m = a1.length;
+        int n = a2.length;
+        for (int i=0;i<m;i++){
+            if (a1[i]>a2[0]){
+                int temp = a1[i];
+                a1[i] = a2[0];
+                a2[0] = temp;
+            }
+            int x = a2[0];
+            int j;
+            for (j=1;j<n && a2[j]<x;j++){
+                a2[j-1] = a2[j];
+            }
+            a2[j-1]=x;
+        }
+    }
+}
