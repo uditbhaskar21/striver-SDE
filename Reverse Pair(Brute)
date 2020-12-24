@@ -1,0 +1,18 @@
+public class reversePairs {
+    public static void main(String[] args) {
+        int nums[]={40,25,19,12,9,6,2};
+        System.out.print(reversePair(nums));
+    }
+
+    public static int reversePair(int[]nums){
+        int count=0;
+        for (int i=0;i< nums.length-1;i++){
+            for (int j=1;j< nums.length;j++){
+                if (nums[i]>nums[j]*(long)(2)){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+}
